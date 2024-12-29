@@ -1,0 +1,362 @@
+_________________________________________________________________
+    <!-- import random -->
+    <!-- Randommer_Of_question = random.choice(QUESTIONS[0]) -->
+    Question_Printer = Element("Question_place")
+    opt_a_Printer = Element("opt_a")
+    opt_b_Printer = Element("opt_b")
+    opt_c_Printer = Element("opt_c")
+    opt_d_Printer = Element("opt_d")
+
+    select = 0
+
+    QUESTIONS = [
+        ["Which bird is known for its colorful feathers and tail?", "Parrot", "Peacock", "Crow", "Sparrow", 2],
+        ["The currency of the United Kingdom is called?", "Dollar", "Pound", "Euro", "Franc", 2],
+        ["What is the chemical symbol for gold?", "Au", "Ag", "Fe", "Pb", 1]
+    ]
+
+    Answers = [2, 2, 1]
+
+    Question_Printer.write(QUESTIONS[0][0])
+    opt_a_Printer.write(QUESTIONS[0][1])
+    opt_b_Printer.write(QUESTIONS[0][2])
+    opt_c_Printer.write(QUESTIONS[0][3])
+    opt_d_Printer.write(QUESTIONS[0][4])
+
+    def opt_a (*args, **kwargs):
+        select = 1
+        For i in range(0, len(QUESTIONS)):
+            question = QUESTIONS[i]
+
+            if select == Answers[i]:
+                Question_Printer.write(QUESTIONS[1][0])
+                opt_a_Printer.write(QUESTIONS[1][1])
+                opt_b_Printer.write(QUESTIONS[1][2])
+                opt_c_Printer.write(QUESTIONS[1][3])
+                opt_d_Printer.write(QUESTIONS[1][4])
+                i++
+            else:
+                Question_Printer.write("Wrong Answer")
+                opt_a_Printer.write(" ")
+                opt_b_Printer.write(" ")
+                opt_c_Printer.write(" ")
+                opt_d_Printer.write(" ")
+
+    <!-- def opt_b (*args, **kwargs):
+        select = 2
+        For i in Answer:
+            if select == Answers[i]:
+                Question_Printer.write(QUESTIONS[1][0])
+                opt_a_Printer.write(QUESTIONS[1][1])
+                opt_b_Printer.write(QUESTIONS[1][2])
+                opt_c_Printer.write(QUESTIONS[1][3])
+                opt_d_Printer.write(QUESTIONS[1][4])
+                i++
+            else:
+                Question_Printer.write("Wrong Answer")
+                opt_a_Printer.write(" ")
+                opt_b_Printer.write(" ")
+                opt_c_Printer.write(" ")
+                opt_d_Printer.write(" ")
+
+    def opt_c (*args, **kwargs):
+        select = 3
+        For i in Answer:
+            if select == Answers[i]:
+                Question_Printer.write(QUESTIONS[1][0])
+                opt_a_Printer.write(QUESTIONS[1][1])
+                opt_b_Printer.write(QUESTIONS[1][2])
+                opt_c_Printer.write(QUESTIONS[1][3])
+                opt_d_Printer.write(QUESTIONS[1][4])
+                i++
+            else:
+                Question_Printer.write("Wrong Answer")
+                opt_a_Printer.write(" ")
+                opt_b_Printer.write(" ")
+                opt_c_Printer.write(" ")
+                opt_d_Printer.write(" ")
+    
+    def opt_d (*args, **kwargs):
+        select = 4
+        For i in Answer:
+            if select == Answers[i]:
+                Question_Printer.write(QUESTIONS[1][0])
+                opt_a_Printer.write(QUESTIONS[1][1])
+                opt_b_Printer.write(QUESTIONS[1][2])
+                opt_c_Printer.write(QUESTIONS[1][3])
+                opt_d_Printer.write(QUESTIONS[1][4])
+                i++
+            else:
+                Question_Printer.write("Wrong Answer")
+                opt_a_Printer.write(" ")
+                opt_b_Printer.write(" ")
+                opt_c_Printer.write(" ")
+                opt_d_Printer.write(" ") -->
+
+_______________________________________________________________________________________________________________________________________________
+Question = Element("Question_place")
+    opt_a = Element("opt_a")
+    opt_b = Element("opt_b")
+    opt_c = Element("opt_c")
+    opt_d = Element("opt_d")
+
+    select = 0
+
+    Q1 = ["Which bird is known for its colorful feathers and tail?", "Parrot", "Peacock", "Crow", "Sparrow", 2]
+    
+    Q2 = ["The currency of the United Kingdom is called?", "Dollar", "Pound", "Euro", "Franc", 2]
+ 
+    Q3 = ["What is the chemical symbol for gold?", "Au", "Ag", "Fe", "Pb", 1]
+
+    QUESTIONS = [Q1, Q2, Q3]
+    ANSWERS = [2, 2, 1]
+
+    Question.write(QUESTIONS[0][0])
+    opt_a.write(QUESTIONS[0][1])
+    opt_b.write(QUESTIONS[0][2])
+    opt_c.write(QUESTIONS[0][3])
+    opt_d.write(QUESTIONS[0][4])
+
+    def opt_a (*args, **kwargs):
+        select = 1
+
+        for i in range (0, 3):
+            if select == ANSWERS[i]:
+                Question.write(QUESTIONS[i+1][0])
+                opt_a.write(QUESTIONS[i+1][1])
+                opt_b.write(QUESTIONS[i+1][2])
+                opt_c.write(QUESTIONS[i+1][3])
+                opt_d.write(QUESTIONS[i+1][4])
+                
+                
+    def opt_b (*args, **kwargs):
+        select = 2
+
+        for i in range (0, 3):
+            if select == ANSWERS[i]:
+                Question.write(QUESTIONS[i+1][0])
+                opt_a.write(QUESTIONS[i+1][1])
+                opt_b.write(QUESTIONS[i+1][2])
+                opt_c.write(QUESTIONS[i+1][3])
+                opt_d.write(QUESTIONS[i+1][4])
+                
+_______________________________________________________________________________________________________________________________________________
+    Question = Element("Question_place")
+    opt_a = Element("opt_a")
+    opt_b = Element("opt_b")
+    opt_c = Element("opt_c")
+    opt_d = Element("opt_d")
+
+    select = 0
+
+    QUESTIONS = ["Which bird is known for its colorful feathers and tail?", 
+        "The currency of the United Kingdom is called?", 
+        "What is the chemical symbol for gold?"
+    ]
+
+    OPTION1 = ["Parrot", "Dollar", "Au"]
+    
+    OPTION2 = ["Peacock", "Pound", "Ag",]
+    
+    OPTION3 = ["Crow", "Euro", "Fe"]
+    
+    OPTION4 = ["Sparrow", "Franc", "Pb"]
+    
+    ANSWERS = [2, 2, 1]
+    
+    select = 0
+
+    Question.write(QUESTIONS[0])
+    opt_a.write(OPTION1[0])
+    opt_b.write(OPTION2[0])
+    opt_c.write(OPTION3[0])
+    opt_d.write(OPTION4[0])
+
+    def opt_a (*args, **kwargs):
+        select = 1
+        i=1
+        if select == ANSWERS[i]:
+            Question.write(QUESTIONS[i])
+            opt_a.write(OPTION1[i])
+            opt_b.write(OPTION2[i])
+            opt_c.write(OPTION3[i])
+            opt_d.write(OPTION4[i])
+            i = i+1
+        else:
+            break
+
+    def opt_a (*args, **kwargs):
+        select = 2
+        for i in range (1, 3):
+            if select == ANSWERS[i]:
+                Question.write(QUESTIONS[i])
+                opt_a.write(OPTION1[i])
+                opt_b.write(OPTION2[i])
+                opt_c.write(OPTION3[i])
+                opt_d.write(OPTION4[i])
+            else:
+                break
+                
+                
+    def opt_b (*args, **kwargs):
+        select = 2
+
+        for i in range (0, 3):
+            if select == ANSWERS[i]:
+                Question.write(QUESTIONS[i+1][0])
+                opt_a.write(QUESTIONS[i+1][1])
+                opt_b.write(QUESTIONS[i+1][2])
+                opt_c.write(QUESTIONS[i+1][3])
+                opt_d.write(QUESTIONS[i+1][4])
+
+
+_______________________________________________________________________________________________________________________________________________Question = Element("Question_place")
+    opt_a = Element("Opt_a")
+    opt_b = Element("Opt_b")
+    opt_c = Element("Opt_c")
+    opt_d = Element("Opt_d")
+
+    questions = [
+        [
+            "Which language was used to create fb?", "Python", "French", "JavaScript",
+            "Php", "None", 4
+        ],
+        [
+            "Which bird is known for its colorful feathers and tail?",
+            "Parrot", "Peacock", "Crow", "Sparrow", 2
+        ],
+        [
+            "Which language was used to create fb?", "Python", "French", "JavaScript",
+            "Php", "None", 4
+        ]
+    ]
+
+    levels = [1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 320000]
+    money = 0
+         
+    Question.write (questions[0][0])
+    opt_a.write(questions[0][1])
+    opt_b.write(questions[0][2])
+    opt_c.write(questions[0][3])
+    opt_d.write(questions[0][4])
+
+    def the_real(reply):
+        for i in range(0, len(questions)):
+            question = questions[i]
+
+            Question.write (question[0])
+            opt_a.write(question[1])
+            opt_b.write(question[2])
+            opt_c.write(question[3])
+            opt_d.write(question[4])
+
+            if (reply == question[-1]):
+                print(f"Correct answer, you have won Rs. {levels[i]}")
+                if(i == 4):
+                    money = 10000
+                elif(i == 9):
+                    money = 320000
+                elif(i == 14):
+                    money = 10000000
+            elif (reply != question[-1]):
+                print("Wrong answer!")
+                break 
+
+            print(f"Your take home money is {money}")   
+
+    def opta (*args, **kwargs):
+        the_real(reply=1)
+    def optb (*args, **kwargs):
+        the_real(reply=2)
+    def optc (*args, **kwargs):
+        the_real(reply=3)
+    def optd (*args, **kwargs):
+        the_real(reply=4)
+
+_______________________________________________________________________________________________________________________________________________
+def the_main():
+    Question = Element("Question_place")
+    opt_a = Element("Opt_a")
+    opt_b = Element("Opt_b")
+    opt_c = Element("Opt_c")
+    opt_d = Element("Opt_d")
+
+    questions = [
+        [
+            "Which language was used to create fb?", "Python", "French", "JavaScript",
+            "Php", "None", 4
+        ],
+        [
+            "Which bird is known for its colorful feathers and tail?",
+            "Parrot", "Peacock", "Crow", "Sparrow", 2
+        ],
+        [
+            "Which language was used to create fb?", "Python", "French", "JavaScript",
+            "Php", "None", 4
+        ]
+    ]
+
+    ANSWERS = [4, 2, 4]
+
+    i = 0
+
+    question = questions[i]
+
+def question_incrementor(i):
+    for i in range (0, len(questions)):
+        question = questions[i]
+        Question.write (question[0])
+        opt_a.write(question[1])
+        opt_b.write(question[2])
+        opt_c.write(question[3])
+        opt_d.write(question[4])
+
+def opta (*args, **kwargs):
+    select = 2
+    if select == ANSWERS[i]:
+        i = i+1
+        question_incrementor(i)
+
+def optb (*args, **kwargs):
+    select = 4
+    if select == ANSWERS[i]:
+        i = i+1
+        question_incrementor(i)
+
+
+def the_starter():
+    Question = Element("Question_place")
+    opt_a = Element("Opt_a")
+    opt_b = Element("Opt_b")
+    opt_c = Element("Opt_c")
+    opt_d = Element("Opt_d")
+
+    questions = [
+        [
+            "Which language was used to create fb?", "Python", "French", "JavaScript",
+            "Php", "None", 4
+        ],
+        [
+            "Which bird is known for its colorful feathers and tail?",
+            "Parrot", "Peacock", "Crow", "Sparrow", 2
+        ],
+        [
+            "Which language was used to create fb?", "Python", "French", "JavaScript",
+            "Php", "None", 4
+        ]
+    ]
+
+    ANSWERS = [4, 2, 4]
+
+    i = 0
+
+    question = questions[i]
+
+    Question.write (question[0])
+    opt_a.write(question[1])
+    opt_b.write(question[2])
+    opt_c.write(question[3])
+    opt_d.write(question[4])
+
+
+the_starter()

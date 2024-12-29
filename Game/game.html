@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>Game</title>
+
+      <link rel="stylesheet" href="./Game.css">
+      <link rel="icon" href="./Game_Sources/WayToTheJackpotlogo.png">
+      
+      <!-- py-script -->
+      <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
+      <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+
+  </head>
+  <body>
+
+    <!-- Hero Section -->
+    <div class="Hero_Section">
+      <div class="video_holder">
+        <div class="Logo_Holder"><img src="./Game_Sources/WayToTheJackpotlogoAnimated.gif" alt="Main Logo"></div>
+      </div>
+      <div class="AmountPyramid">
+        <video autoplay loop>
+          <source src="./Game_Sources/Game_AmountPyramid.mp4">
+        </video>
+      </div>
+
+      <audio autoplay>
+        <source src="./Game_Sources/Game_startAudio.mp3">
+      </audio>
+
+      <div class="Winner" id="Winner_Message">
+          <img src="./Game_Sources/Winner.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- The Game -->
+    <div class="Question_holder">
+      <img src="./Game_Sources/Question_background2.png" alt="">
+      <div class="question_placeholder">
+        <h4 id="question">&nbsp;</h4>
+      </div>
+    </div>
+
+    <div class="all_Selectables">
+      <div id="answer-buttons" class="Options_place">
+        <button id="Button1" class="btn">Answer 1</button>
+        <button id="Button2" class="btn">Answer 2</button>
+        <button id="Button3" class="btn">Answer 3</button>
+        <button id="Button4" class="btn">Answer 4</button>
+      </div>
+      <!-- <p id="The_Place_for_i"></p> -->
+       <div class="game_changers">
+         <button id="next-btn">Next</button>
+         <a href="C:\Users\deeba\OneDrive\Desktop\Code parle\WayToTheJackpot\WayToTheJackpot.html" class="Quit_Game"><button>Quit</button></a>
+       </div>
+    </div>
+
+</body>
+
+<script src="./game.js"></script> 
+<script type="py" src="./game.py" ></script>
+
+</html>
