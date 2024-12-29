@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: campton, arial, sans-serif;
+}
+
+body {
+    background-color: aliceblue; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ##################################################### Header Section ############################################################# */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    /* background-color: #DBE9F5;  */
+    background-color: #dbe9f57f; 
+    position:relative;
+    margin: 0 1.5rem;
+}
+
+header a img{
+    width: 9rem;
+    height: auto;
+    transform: translateX(550%);
+    animation: Header_a_img_Animation 1.5s ease-in-out forwards;
+}
+
+header a button {
+    width: 7rem;
+    height: 6rem;
+    font-weight: 700;
+    border: 0;
+    background: linear-gradient(0deg, rgba(3,49,122,1) 0%, rgba(4,44,113,1) 59%, rgba(7,35,95,1) 100%);    color: white; /* White text */
+    border: 2px solid #ffcc00; /* Gold border */
+    border-radius: 30px;
+    text-decoration: none;    color: aliceblue;
+    transition: 0.3s ease-in-out;
+}
+
+@keyframes Header_a_img_Animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+header a button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0);
+    text-shadow:  0 0 10em rgb(55, 140, 231), 0 0 6em rgb(55, 140, 231), 0 0 10em rgb(55, 140, 231), 0 0 6em rgb(55, 140, 231), 0 0 2em rgb(55, 140, 231);
+    color: #dba944
+
+}
+
+/* ##################################################### Hero Section ############################################################# */
+.Hero_Section__section {
+    background-color: #dbe9f57f; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10rem 0 4rem 0;
+    position: relative;
+    margin: 0 1.5rem;
+}
+
+.Hero_Section__section img{
+    width: 43rem;
+    position: absolute;
+    align-content: center;
+    bottom: 3rem;
+    right: 41rem;
+}
+
+.Hero_section__Gamebtn_container{
+    display: flex;
+    align-content: center;
+    justify-content: right;
+    position: relative;
+    left: 17rem;
+    top: 2rem;
+}
+
+.Hero_section__Gamebtn_container p{
+    font-size: 2rem;
+    flex-grow: .1;
+}
+
+.Hero_section__Gamebtn_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Game__button_holder{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.Hero_section__Gamebtn_container a{
+    width: 10rem;
+    height: 6rem;
+    justify-content: center;
+    display: flex;
+    padding: 0.5rem 0;
+}
+
+.Hero_section__Gamebtn_container button{
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    border: none;
+    color: aliceblue;
+    background: linear-gradient(0deg, rgba(3,49,122,1) 0%, rgba(4,44,113,1) 59%, rgba(7,35,95,1) 100%);    color: white; /* White text */
+    border: 2px solid #ffcc00; /* Gold border */
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.Hero_section__Gamebtn_container button:hover{
+    cursor: pointer;
+    background-color: #9ac9f200;
+    transform: scale(1.1);
+    text-shadow:  0 0 10em rgb(55, 140, 231), 0 0 6em rgb(55, 140, 231), 0 0 10em rgb(55, 140, 231), 0 0 6em rgb(55, 140, 231), 0 0 2em rgb(55, 140, 231);
+    color: #dba944
+}
+
+.Game__button_holder h1{
+    padding: 2rem 0 1rem 0;
+}
+
+/* ##################################################### Footer ############################################################# */
+footer{
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    background: linear-gradient(90deg, rgba(0,2,76,1) 35%, rgba(1,53,107,1) 100%);
+    display: flex;
+    
+}
+
+footer .The_footer_line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0.75;
+}
+
+footer .The_footer_contacts{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer p{
+    color: aliceblue;
+}
+
+footer .The_footer_line a{
+    color: aliceblue;
+    border-bottom: 1px solid aliceblue;
+    border-spacing: 2px;
+}
+
+footer .The_footer_line a:hover{
+    color: #dba944;
+    border-bottom: 1px solid #dba944;
+}
+
+footer img{
+    width: 30px;
+}
+
+footer .thecontactImages{
+    padding-top: 0.7rem;
+    gap: 1rem;
+}
+
+footer .thecontactImages :hover{
+    filter:invert(50%);
+}
