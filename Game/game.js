@@ -879,8 +879,8 @@ const question17 = [
         question: "In which year did India launch its first mission to Mars, `Mangalyaan`?",
         answers: [
             {text: "A. 2012", correct: false},
-            {text: "B. 2013", correct: false},
-            {text: "C. 2014", correct: true},
+            {text: "B. 2013", correct: true},
+            {text: "C. 2014", correct: false},
             {text: "D. 2015", correct: false},
         ]
     },
